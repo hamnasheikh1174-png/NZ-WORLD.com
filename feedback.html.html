@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | NZ World</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+<!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        
+        <!-- Logo / Website Name -->
+        <div class="">
+          <a href="#" class="text-2xl font-bold text-indigo-600">NZ WORLD</a>
+        </div>
+        
+        <!-- Menu Items -->
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+          <a href="about.html" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
+          <a href="feedback.html" class="text-gray-700 hover:text-indigo-600 font-medium">Feedback</a>
+          <a href="book.html" class="text-gray-700 hover:text-indigo-600 font-medium">Books</a>
+          <a href="signin.html" class="text-white bg-indigo-600 hover:bg-indigo-600 px-3 py-1 rounded-md font-medium">Sign In</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1 bg-white">
+      <a href="#" class="block text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+      <a href="about.html" class="block text-gray-700 hover:text-indigo-600 font-medium">About</a>
+      <a href="feedback.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Feedback</a>
+      <a href="book.html" class="text-gray-700 hover:text-indigo-600 font-medium">Books</a>
+      <a href="signin.html" class="block text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md font-medium">Sign In</a>
+    </div>
+  </nav>
+
+  
+  <!-- Script for Mobile Menu Toggle -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- Hero Header -->
+  <section class="bg-indigo-600 py-0.5 flex items-center justify-center mt-0 mb-1">
+    <h1 class="text-4xl font-bold text-white">Feedback</h1>
+  </section>
+
+  <!-- Feedback Section -->
+<section class="relative min-h-screen flex items-center justify-center bg-gray-100">
+
+  <!-- Background Image -->
+  <img 
+    src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=1350&q=80
+"
+    alt="Feedback"
+    class="absolute inset-0 w-full h-full object-cover">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Feedback Card -->
+  <div class="relative z-10 max-w-5xl w-full bg-white rounded-2xl shadow-2xl grid md:grid-cols-2 overflow-hidden">
+
+    <!-- Left Text Section -->
+    <div class="p-10 bg-indigo-500 text-white flex flex-col justify-center">
+      <h2 class="text-4xl font-bold mb-4">Your Feedback Matters</h2>
+      <p class="leading-relaxed text-indigo-100">
+        At NZ World, we value your thoughts and suggestions.
+        Your feedback helps us improve our digital reading experience
+        and deliver better content for readers everywhere.
+      </p>
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="p-10">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send Us a Message</h3>
+
+      <form class="space-y-4">
+        <input 
+          type="text" 
+          placeholder="Your Name"
+          class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+        <input 
+          type="email" 
+          placeholder="Your Email"
+          class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+        <textarea 
+          rows="4"
+          placeholder="Your Feedback"
+          class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+
+        <button 
+          type="submit"
+          class="w-full bg-indigo-500 text-white py-3 rounded-md font-medium hover:bg-indigo-700 transition">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+
+</body>
+</html>

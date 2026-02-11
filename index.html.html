@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NZ World</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        
+        <!-- Logo / Website Name -->
+        <div class="">
+          <a href="#" class="text-2xl font-bold text-indigo-600">NZ WORLD</a>
+        </div>
+        
+        <!-- Menu Items -->
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+          <a href="about.html" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
+          <a href="feedback.html" class="text-gray-700 hover:text-indigo-600 font-medium">Feedback</a>
+          <a href="book.html" class="text-gray-700 hover:text-indigo-600 font-medium">Books</a>
+          <a href="signin.html" class="text-white bg-indigo-600 hover:bg-indigo-600 px-3 py-1 rounded-md font-medium">Sign In</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1 bg-white">
+      <a href="#" class="block text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+      <a href="about.html" class="block text-gray-700 hover:text-indigo-600 font-medium">About</a>
+      <a href="feedback.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Feedback</a>
+      <a href="book.html" class="text-gray-700 hover:text-indigo-600 font-medium">Books</a>
+      <a href="signin.html" class="block text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md font-medium">Sign In</a>
+    </div>
+  </nav>
+
+  
+  <!-- Script for Mobile Menu Toggle -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+   
+<!-- Account / Sign In Section with Background Image -->
+<section class="relative h-screen bg-gray-800 flex items-center justify-center">
+  
+  <!-- Background Image -->
+  <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80" 
+       alt="Reading Books" 
+       class="absolute inset-0 w-full h-full object-cover brightness-50">
+
+  <!-- Text and Sign In Form -->
+  <div class="relative z-10 text-center text-white max-w-md px-4">
+    <h2 class="text-4xl font-bold mb-4">Welcome to NZ World</h2>
+    <p class="mb-6">Every page is a new adventure waiting to be explored.To save your favorite books and continue reading anytime, anywhere.</p>
+  </div>
+</section>
+
+
+
+</body>
+</html>
